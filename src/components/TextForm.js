@@ -48,16 +48,16 @@ export default function TextForm(props) {
 
           </textarea>
       </div>
-      <button className="btn btn-primary" onClick={handleUpClick}>Convert to Uppercase</button>
-      <button className="btn btn-primary mx-3"  onClick={handleLwClick}>Convert to Lowercase</button>
-      <button className="btn btn-primary mx-3"  onClick={handleCopy}>Copy text</button>
-      <button className="btn btn-primary mx-3"  onClick={handleClear}>Clear Text</button>
+      <button className="btn btn-primary my-1" onClick={handleUpClick}>Convert to Uppercase</button>
+      <button className="btn btn-primary mx-3  my-1 "  onClick={handleLwClick}>Convert to Lowercase</button>
+      <button className="btn btn-primary mx-3 my-1"  onClick={handleCopy}>Copy text</button>
+      <button className="btn btn-primary mx-3 my-1"  onClick={handleClear}>Clear Text</button>
     </div>
 
     <div className="container my-3" style={{color:props.mode === 'dark' ? 'white' : 'black'}}>
 
         <h1>Your Summary</h1>
-        <p>You have {text.split(" ").length} and {text.length} words</p>
+        <p>You have {text.split(" ").filter((element)=>{return  element.length!==0}).length} and {text.length} words</p>
 
         <p>{0.008 * text.split(" ").length} is the time requried to read the text.</p>
     </div>

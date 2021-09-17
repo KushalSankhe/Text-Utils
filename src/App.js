@@ -5,9 +5,9 @@ import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
 import React, { useState } from "react";
 import Alert from "./components/Alert";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+// import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
-import About from "./components/About";
+// import About from "./components/About";
 
 function App() {
   const [mode, setMode] = useState("light");
@@ -37,25 +37,25 @@ function App() {
   };
   return (
     <>
-      <Router>
+      {/* <Router> */}
         <Navbar title="Kushal Sankhe" mode={mode} toggleMode={toggleMode} />
         <Alert alert={alert} />
         <div className="container">
-          <Switch>
+          {/* <Switch>
             <Route exact path="/about">
             <About/>
             </Route>
-            <Route exact path="/">
+            <Route exact path="/"> */}
               <TextForm
                 showAlert={showAlert}
                 heading="Enter text to analyse"
                 mode={mode}
               />
-            </Route>
-          </Switch>
+            {/* </Route>
+          </Switch> */}
           {/* <About/> */}
         </div>
-      </Router>
+      {/* </Router> */}
     </>
   );
 }
